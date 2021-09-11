@@ -6,7 +6,8 @@ public class Program {
     public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(new File("text.txt"));
         Map<String, Integer> words = new HashMap<String, Integer>();
-        in.useDelimiter("\\s*(\\s|,|!|'|\\.)\\s*");
+        //in.useDelimiter("\\s*(\\s|,|!|'|\\.)\\s*");
+        in.useDelimiter("\\W+");
 
         while(in.hasNext()){
             String s = in.next().toLowerCase();
